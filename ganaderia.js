@@ -17,15 +17,17 @@ console.log(vobina._Peso);
 
 console.log();
 
-//Clase Criaderos
-class Criaderos {
-    Vacas;
-    Cerdos;
-    Gallinas;
-    constructor(animal){
-        this.Vacas = animal;
-        this.Cerdos = animal;
-        this.Gallinas = animal;
+//Clase Empleado
+class Empleado {
+    nombre;
+    apellidos;
+    #correo;
+    #salario;
+    constructor(name,lastname,email,pay){
+        this.nombre = name;
+        this.apellidos = lastname;
+        this.#correo = email;
+        this.#salario = pay 
     }
 }
 
