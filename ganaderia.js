@@ -22,7 +22,7 @@ class Criaderos {
     Vacas;
     Cerdos;
     Gallinas;
-    constructor(Vacas,Cerdos,Gallinas){
+    constructor(animal){
         this.Vacas = animal;
         this.Cerdos = animal;
         this.Gallinas = animal;
