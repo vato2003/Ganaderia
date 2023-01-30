@@ -17,4 +17,15 @@ console.log(vobina._Peso);
 
 console.log();
 
-xd
+//Clase Criaderos
+class Criaderos {
+    Vacas;
+    Cerdos;
+    Gallinas;
+    constructor(Vacas,Cerdos,Gallinas){
+        this.Vacas = animal;
+        this.Cerdos = animal;
+        this.Gallinas = animal;
+    }
+}
+
