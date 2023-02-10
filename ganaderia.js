@@ -14,8 +14,8 @@ console.log(vobina._Peso);
 
 console.log();
 
-//Clase Empleado
-class Empleado {
+//Clase Persona
+class Persona {
     nombre;
     apellidos;
     #correo;
