@@ -1,46 +1,63 @@
-class Ganaderia {
-    constructor (Alimento,Estado,peso){
-        this._Alimento=Alimento;
-        this._Estado = Estado;
-        this._Peso = peso;
+class Personal{
+    constructor(name, position, Id, payroll){
+        this.name = name;
+        this.position = position;
+        this.Id = Id;
+        this.payroll = payroll;
     }
 }
 
-const vobina = new Ganaderia('pasto','Bien',350);
 
-console.log(vobina._Alimento);
-console.log(vobina._Estado);
-console.log(vobina._Peso);
 
-console.log();
 
-//Clase Persona
-class Persona {
-    nombre;
-    apellidos;
-    #correo;
-    #salario;
-    constructor(name,lastname,email,pay){
-        this.nombre = name;
-        this.apellidos = lastname;
-        this.#correo = email;
-        this.#salario = pay; 
+
+
+class UI {
+    addPersonal(empleado){
+        const empleadoList = document.getElementById('personal-list');
+        const element = document.createElement('div');
+        element.innerHTML = `
+            <div class="card text.center mb-4">
+                 <div class="card-body">
+                        <strong>Personal</strong>: ${empleado.name}
+                        <strong>Position</strong>: ${empleado.position}
+                        <strong>Id</strong>: ${empleado.Id}
+                 </div>
+
+            </div>
+
+        `;
+        empleadoList.appendChild(element);
+    
+    }
+
+
+    deletePersonal(){
+
+    }
+
+    showMessage(){
+
     }
 }
 
-//Clase Almacen
-class Almacen{
-    Secciones
-    Materia_prima
-    #id_Almacen
-    #Existencias
-    #Productos
-    constructor(Seccion,Materia,Almacen,Existencia,Producto){
-        this.Secciones = Seccion;
-        this.Materia_prima = Materia;
-        this.#id_Almacen = Almacen;
-        this.#Existencias = Existencia;
-        this.#Productos = Producto;
-    }
-}
+
+//eventos de accion 
+
+document.getElementById('personal-form')
+    .addEventListener('submit', function(e){
+    const name = document.getElementById('name').value;
+    const position = document.getElementById('position').value;
+    const Id = document.getElementById('Id').value;
+
+    const empleado = new Personal(name,position, Id);
+
+    const ui = new UI();
+    ui.addPersonal(empleado);
+    e.preventDefault();
+
+
+
+});
+
     
