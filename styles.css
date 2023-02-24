@@ -99,28 +99,7 @@ html {
         
       }
 
-      .enlaces-menu{
-        
-          flex-direction:column;
-          justify-content: space-around;
-          align-items:center;
-          height: 92vh;         
-          margin:0;
-          padding:0; 
-          display:none;
-          opacity:0;
-          transition: opacity 5s ease-out;
-          width:100%;
-      
-         
-      }
-      .enlaces-menu li{
-        text-align:center;
-        width:100%;
-        padding:20px;    
-    }
-  
-}
+
 
 /* Animaciones del boton */
   
