@@ -7,7 +7,7 @@ password = document.getElementById("contraseña").value;
 
 if( user == "Usuario1" && password == 12345){
     alert("Inicio de Sesion correcto")
-    window.location = "Ganaderia2.html";
+    window.location = "PantallaPrincipal.html";
 }else{
     alert("Usuario o contraseña incorrecta")
 }
