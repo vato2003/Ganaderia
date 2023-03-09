@@ -1,0 +1,20 @@
+const loginForm = document.querySelector('#login-form');
+
+loginForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const username = document.querySelector('#username').value;
+  const password = document.querySelector('#password').value;
+
+  // Verificar si los valores del nombre de usuario y la contraseña son válidos
+  if (username === 'usuario' && password === 'contraseña') {
+    // Guardar información de inicio de sesión en una cookie
+    document.cookie = `username=${username}; expires=${new Date(Date.now() + 86400e3).toUTCString()}; path=/`;
+
+    // Redirigir al usuario a la página principal
+    window.location.href = 'pagina_principal.html';
+  } else {
+    // Mostrar un mensaje de error al usuario
+    alert('Nombre de usuario o contraseña incorrectos');
+  }
+});
